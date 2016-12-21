@@ -5,13 +5,13 @@ Install Java and get JDownloader with the following commands.
 sudo apt install openjdk-8-jre-headless
 wget http://installer.jdownloader.org/JDownloader.jar
 ```
-After that move JDownloader and change the owner to the user (e.g `media`) under which JDownloader should be executed.
+After that move `JDownloader.jar` and change the owner to the user (e.g. `media`) under which JDownloader should be executed.
 ```
 sudo mkdir /opt/jdownloader
 sudo mv jdownloader.jar /opt/jdownloader
-sudo chown -R media:media /opt/jdownloader 
+sudo chown media:media /opt/jdownloader 
 ```
-Now we are ready to install JDownloader. Execute this command several times until you get asked for your My JDownloader login credentials.
+Now we are ready to install JDownloader. Execute this command several times until you get asked for your My JDownloader login credentials on the console.
 ```
 java -jar /opt/jdownloader/JDownloader.jar -norestart
 ```
@@ -36,7 +36,6 @@ To enable JDownloader on startup run this command.
 ```
 sudo systemctl enable jdownloader.service
 ```
-
 After a reboot you can access your server under https://my.jdownloader.org
 
 Enjoy!
