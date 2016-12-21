@@ -11,6 +11,10 @@ sudo mkdir /opt/jdownloader
 sudo mv jdownloader.jar /opt/jdownloader
 sudo chown -R media:media /opt/jdownloader 
 ```
+Now we are ready to install JDownloader. Execute this command several times until you get asked for your My JDownloader login credentials.
+```
+java -jar /opt/jdownloader/JDownloader.jar -norestart
+```
 Then create a new systemd unit under `/etc/systemd/system/jdownloader.service` and paste this script.
 ```bash
 [Unit]
@@ -28,18 +32,11 @@ Group=media # Should be owner of /opt/jdownloader
 [Install]
 WantedBy=multi-user.target
 ```
-To enable and start JDownloader run this commands.
+To enable JDownloader on startup run this command.
 ```
 sudo systemctl enable jdownloader.service
-sudo systemctl start jdownloader.service
 ```
-After JDownloader is updated you can fill in your My JDownloader credentials under `/opt/jdownloader/cfg/org.jdownloader.api.myjdownloader.MyJDownloaderSettings.json`.
-```
-{
-  "password" : "<YOUR PASSWORD>",
-  "email" : "<YOUR EMAIL>"
-}
-```
-Now you can access your server under https://my.jdownloader.org
+
+After a reboot you can access your server under https://my.jdownloader.org
 
 Enjoy!
