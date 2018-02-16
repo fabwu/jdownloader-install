@@ -26,8 +26,9 @@ Environment=JD_HOME=/opt/jdownloader
 Type=oneshot
 ExecStart=/usr/bin/java -Djava.awt.headless=true -jar /opt/jdownloader/JDownloader.jar
 RemainAfterExit=yes
-User=media # Should be owner of /opt/jdownloader
-Group=media # Should be owner of /opt/jdownloader
+# Should be owner of /opt/jdownloader
+User=media
+Group=media
 
 [Install]
 WantedBy=multi-user.target
