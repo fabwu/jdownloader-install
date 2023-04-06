@@ -8,7 +8,7 @@ wget http://installer.jdownloader.org/JDownloader.jar
 After that move `JDownloader.jar` and change the owner to the user (e.g. `media`) under which JDownloader should be executed.
 ```
 sudo mkdir /opt/jdownloader
-sudo mv Jdownloader.jar /opt/jdownloader
+sudo mv JDownloader.jar /opt/jdownloader
 sudo chown media:media /opt/jdownloader 
 ```
 Now we are ready to install JDownloader. Execute this command several times until you get asked for your My JDownloader login credentials on the console.
